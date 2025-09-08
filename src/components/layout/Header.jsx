@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -12,9 +12,9 @@ const Header = () => {
             <nav>
               <ul className="flex flex-row gap-8">
                 <li>
-                  <a href="#" className="text-gray-800 hover:text-gray-600">
+                  <Link href="#" className="text-gray-800 hover:text-gray-600">
                     Home
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
