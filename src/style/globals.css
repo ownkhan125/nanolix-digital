@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #000;
   --foreground: #171717;
+  --greydark: #dcdcdc;
 }
 
 @theme inline {
@@ -14,14 +15,122 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000;
     --foreground: #ededed;
+    --greydark: #dcdcdc;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  font-size: 16px;
+  color: var(--greydark);
   font-family: var(--font-onest);
   font-weight: 400;
+  line-height: 22px;
+  background-color: var(--background);
 }
+
+h1,
+h2,
+h4,
+h5,
+h6 {
+  font-family: var(--font-neuemontreal);
+  font-weight: 400;
+}
+
+h3,
+h2 {
+  font-family: var(--font-neuemontreal);
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 75px;
+  line-height: 80px;
+}
+
+h2 {
+  font-size: 45px;
+  line-height: 50px;
+}
+
+h3 {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.fs-18 {
+  font-size: 18px;
+  line-height: 27px;
+  font-family: var(--font-quicksand);
+}
+
+/* buttons  */
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 40px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-primary {
+  position: relative;
+  color: #fff;
+  border: 1px solid #535353;
+  transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #121212 12%, #272727 48.13%, #121212 85%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+}
+/* buttons  */
+
+/* navbar-section */
+header .container {
+  max-width: 100%;
+}
+/* navbar-section */
+
+/* hero-section */
+.hero-section {
+  position: relative;
+  padding-top: 130px;
+  background-image: url("/images/Union.png");
+  fill: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(155, 155, 155, 0.2) 0%,
+    rgba(155, 155, 155, 0) 100%
+  );
+  /* opacity: 0.6; */
+}
+
+.hero-section h2 {
+  font-weight: 400;
+  background: linear-gradient(
+    313deg,
+    rgba(155, 155, 155, 0.5) 4.92%,
+    rgba(237, 235, 232, 0.5) 49.51%,
+    rgba(155, 155, 155, 0.5) 93.21%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* hero-section */

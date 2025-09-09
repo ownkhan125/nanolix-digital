@@ -20,7 +20,7 @@ const Header = () => {
   };
 
   return (
-    <header className="absolute top-0 left-0 w-full z-50 ">
+    <header className="absolute top-0 left-0 w-full z-50 px-14">
       <div className="container mx-auto px-4 py-2">
         <div className="w-full flex flex-row gap-4 justify-between items-center">
           <Link href="/">
@@ -114,7 +114,7 @@ const Header = () => {
             </ul>
           </nav>
 
-          <button onClick={toggle}>
+          <button className="btn btn-primary" onClick={toggle}>
             <Link className="hidden lg:block" href="/">
               Get Started
             </Link>
@@ -129,9 +129,9 @@ const Header = () => {
               <path
                 d="M6.58496 9.5H31.9183M6.58496 19H31.9183M6.58496 28.5H31.9183"
                 stroke="#A1A1AA"
-                stroke-width="3.16667"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="3.16667"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               ></path>
             </svg>
           </button>

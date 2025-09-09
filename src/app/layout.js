@@ -1,9 +1,15 @@
-import { Onest } from "next/font/google";
+import { Onest, Quicksand } from "next/font/google";
 import "../style/globals.css";
 import localFont from "next/font/local";
 
 const onest = Onest({
   variable: "--font-onest",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const quicksand = Quicksand({
+  variable: "--font-quicksand",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
@@ -45,7 +51,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${onest.variable} ${neuemontreal.variable}`}>
+      <body
+        className={`${onest.variable} ${neuemontreal.variable} ${quicksand.variable}`}
+      >
         {children}
       </body>
     </html>
