@@ -1,14 +1,40 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Onest } from "next/font/google";
+import "../style/globals.css";
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const onest = Onest({
+  variable: "--font-onest",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const neuemontreal = localFont({
+  src: [
+    {
+      path: "../../public/fonts/neue-montreal/NeueMontreal-Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+
+    {
+      path: "../../public/fonts/neue-montreal/NeueMontreal-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+
+    {
+      path: "../../public/fonts/neue-montreal/NeueMontreal-Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+
+    {
+      path: "../../public/fonts/neue-montreal/NeueMontreal-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-neuemontreal",
 });
 
 export const metadata = {
@@ -19,9 +45,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${onest.variable} ${neuemontreal.variable}`}>
         {children}
       </body>
     </html>
