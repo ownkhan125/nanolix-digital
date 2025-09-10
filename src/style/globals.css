@@ -17,7 +17,7 @@
   :root {
     --background: #000;
     --foreground: #ededed;
-    --greydark: #dcdcdc;
+    /* --greydark: #dcdcdc; */
   }
 }
 
@@ -30,17 +30,14 @@ body {
   background-color: var(--background);
 }
 
-h1,
-h2,
-h4,
-h5,
-h6 {
+h1 {
   font-family: var(--font-neuemontreal);
   font-weight: 400;
 }
 
+h2,
 h3,
-h2 {
+h4 {
   font-family: var(--font-neuemontreal);
   font-weight: 500;
 }
@@ -51,6 +48,11 @@ h1 {
 }
 
 h2 {
+  font-size: 50px;
+  line-height: 70px;
+}
+
+h3 {
   font-size: 45px;
   line-height: 50px;
 }
@@ -60,10 +62,33 @@ h3 {
   line-height: 40px;
 }
 
+h4 {
+  font-size: 30px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
 .fs-18 {
   font-size: 18px;
   line-height: 27px;
   font-family: var(--font-quicksand);
+}
+
+.pt-100 {
+  padding-top: 100px;
+}
+
+.line:before {
+  content: "";
+  vertical-align: middle;
+  background: #fffc;
+  border-radius: 10px;
+  width: 40px;
+  height: 3px;
+  margin-right: 8px;
+  display: inline-block;
 }
 
 /* buttons  */
@@ -134,3 +159,19 @@ header .container {
   -webkit-text-fill-color: transparent;
 }
 /* hero-section */
+
+/* service-section */
+.service-section .card {
+  border-radius: 15px;
+  background: rgba(25, 25, 25, 0.6);
+  padding: 36px;
+}
+/* service-section */
+
+/* media query minimum-width */
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+/* media query minimum-width */
