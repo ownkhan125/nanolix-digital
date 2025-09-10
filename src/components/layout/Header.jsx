@@ -114,10 +114,13 @@ const Header = () => {
             </ul>
           </nav>
 
-          <button className="btn btn-primary" onClick={toggle}>
+          <button className="hidden lg:block btn btn-primary">
             <Link className="hidden lg:block" href="/">
               Get Started
             </Link>
+          </button>
+
+          <button className="block lg:hidden" onClick={toggle}>
             <svg
               className="block lg:hidden"
               xmlns="http://www.w3.org/2000/svg"

@@ -72,7 +72,7 @@ const LanguageSection = () => {
   ];
   return (
     <section className="language-section mt-12.5">
-      <div className="container mx-auto">
+      <div className="container ">
         <Swiper
           modules={[Autoplay]}
           loop={true} // infinite loop
